@@ -1,5 +1,5 @@
 # SpringBootFirstAssignment
-# Customer API Documentation 📋
+## Customer API Documentation 📋
 
 This document provides instructions on how to interact with the Customer API.
 
@@ -11,7 +11,7 @@ Replace `localhost:9090` with the base URL where your Spring Boot application is
 
 ### Request
 
-```plaintext
+```
 POST /customers
 
 {
@@ -20,20 +20,25 @@ POST /customers
     "email": "john.doe@example.com",
     "phoneNumber": "1234567890"
 }
-
+```
 
 ### Response
 
-🎉 201 ok
+```
+🎉 **201 OK**
+```
 
 ## 🕵️‍♂️ Get a Customer by ID (GET)
 
 ### Request
 
-```plaintext
+```
 GET /customers/{customer_id}
+```
 
 ### Response
+
+```json
 {
     "id": 1,
     "firstName": "John",
@@ -43,13 +48,23 @@ GET /customers/{customer_id}
     "billing_address": "Street 123",
     "delivery_address": "Street 123"
 }
+```
 
-200 ok
+```
+🎉 **200 OK**
+```
 
 ## 🔄 Update a Customer by ID (PUT)
-PUT  /customers/{customer_id}
 
-### Input body with update values
+### Request
+
+```
+PUT /customers/{customer_id}
+```
+
+#### Input body with update values
+
+```json
 {
     "id": 1,
     "firstName": "John",
@@ -59,14 +74,24 @@ PUT  /customers/{customer_id}
     "billing_address": "New address",
     "delivery_address": "New address"
 }
+```
 
-Response
-200 ok
+### Response
+
+```
+🎉 **200 OK**
+```
 
 ## ❌ Delete a Customer by ID (DELETE)
-PUT  /customers/{customer_id}
 
+### Request
 
-Response
-204 ok
+```
+DELETE /customers/{customer_id}
+```
 
+### Response
+
+```
+🎉 **204 OK**
+```
