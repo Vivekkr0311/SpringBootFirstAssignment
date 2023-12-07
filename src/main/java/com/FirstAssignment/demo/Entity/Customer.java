@@ -1,6 +1,5 @@
 package com.FirstAssignment.demo.Entity;
 
-
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
@@ -25,6 +24,13 @@ public class Customer {
     private Address deliveryAddress;
     public Long getId() {
         return id;
+    }
+
+    public Customer(String firstName, String lastName, String phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
     public void setId(Long id) {
