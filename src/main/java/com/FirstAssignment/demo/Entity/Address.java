@@ -1,11 +1,14 @@
 package com.FirstAssignment.demo.Entity;
 
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 
-@Embeddable
+@Entity
 public class Address {
 
+    @Id
     private Long id;
     private String landmark;
     private String pinCode;
