@@ -12,14 +12,17 @@ public class Customer {
     private String lastName;
     private String phoneNumber;
     private String email;
+    private String billing_address;
+    private String delivery_address;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "billing_address_id")
-    private Address billingAddress;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "billing_address_id")
+//    private Address billingAddress;
+//
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "delivery_address_id")
+//    private Address deliveryAddress;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "delivery_address_id")
-    private Address deliveryAddress;
     public Long getId() {
         return id;
     }
@@ -70,20 +73,19 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public Address getBillingAddress() {
-        return billingAddress;
+    public String getBilling_address() {
+        return billing_address;
     }
 
-    public void setBillingAddress(Address billingAddress) {
-        this.billingAddress = billingAddress;
+    public void setBilling_address(String billing_address) {
+        this.billing_address = billing_address;
     }
 
-    public Address getDeliveryAddress() {
-        return deliveryAddress;
+    public String getDelivery_address() {
+        return delivery_address;
     }
 
-    public void setDeliveryAddress(Address deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
+    public void setDelivery_address(String delivery_address) {
+        this.delivery_address = delivery_address;
     }
 }
