@@ -24,6 +24,10 @@ public class Customer {
         return id;
     }
 
+    public Customer(){
+
+    }
+
     public Customer(String firstName, String lastName, String phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
