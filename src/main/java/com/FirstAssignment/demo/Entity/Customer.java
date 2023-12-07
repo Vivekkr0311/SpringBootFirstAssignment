@@ -2,7 +2,6 @@ package com.FirstAssignment.demo.Entity;
 
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.CascadeType;
 import org.springframework.data.annotation.Id;
 
 @Entity
