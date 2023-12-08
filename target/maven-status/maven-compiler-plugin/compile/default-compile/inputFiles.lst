@@ -4,6 +4,7 @@
 /Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/Exception/GlobalExceptionHandler.java
 /Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/Service/CustomerService.java
 /Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/controller/CustomerControllerV2.java
+/Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/Config/WebConfig.java
 /Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/Entity/Customer.java
 /Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/Service/DatabaseMirgration.java
 /Users/vivek/IdeaProjects/SpringBoot Projects/SpringBootFirstAssignment/src/main/java/com/FirstAssignment/demo/Repository/CustomerServiceRepository.java
