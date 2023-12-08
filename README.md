@@ -150,4 +150,67 @@ Accept: application/xml
 
 Adjust the URLs and headers based on your specific implementation. This documentation shows how to request data in both JSON and XML formats using the \`Accept\` header.
 
+# Product API Documentation 📋
+
+This document provides instructions on how to interact with the Product API.
+
+## Base URL
+
+Replace `localhost:9090` with the base URL where your Spring Boot application is running. 🌐
+
+## 📦 Get All Products (GET)
+
+### Request
+
+```
+GET /products
+```
+
+### Response
+```json
+[
+    {
+        "skuID": 1,
+        "label": "Product ABC",
+        "productDescription": "A high-quality product with advanced features.",
+        "stock": 100,
+        "leadtime": 7
+    },
+    // ... (other product entries)
+]
+```
+
+Status Code: 200 OK
+
+## ✨ Create a Product (POST)
+
+### Request
+
+```
+POST /products
+Request Body:
+
+{
+    "label": "New Product",
+    "productDescription": "Description of the new product.",
+    "stock": 50,
+    "leadtime": 10
+}
+```
+
+### Response
+
+Status Code: 201 Created
+
+```json
+{
+    "skuID": 2,
+    "label": "New Product",
+    "productDescription": "Description of the new product.",
+    "stock": 50,
+    "leadtime": 10
+}
+```
+
+
 
