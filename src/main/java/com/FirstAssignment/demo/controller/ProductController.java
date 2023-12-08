@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -21,9 +23,9 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<String> addProductMessage(){
-        String message = "This path (/products) is for adding a product. Please make a POST request to this path.";
-        return new ResponseEntity<>(message, HttpStatus.OK);
+    public ResponseEntity<List<Product>> addProductMessage(){
+        List<Product> products = productService.getAllProducts();
+        return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
     @PostMapping

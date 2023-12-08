@@ -5,6 +5,8 @@ import com.FirstAssignment.demo.Repository.ProductServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
 
@@ -25,5 +27,8 @@ public class ProductService {
 
     public void deleteProduct(Long skuID){
         productServiceRepository.deleteById(skuID);
+    }
+    public List<Product> getAllProducts(){
+        return productServiceRepository.findAll();
     }
 }

@@ -21,7 +21,6 @@ public class Product {
     }
 
     public Product(String label, String productDescription, int stock, int leadtime) {
-        this.skuID = skuID;
         this.label = label;
         this.productDescription = productDescription;
         this.stock = stock;
