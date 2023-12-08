@@ -95,3 +95,59 @@ DELETE /customers/{customer_id}
 ```
 🎉 **204 OK**
 ```
+
+# 🚀 Spring Boot Customer API
+
+This API provides information about customers and supports content negotiation for responses in both JSON and XML formats.
+
+## 🌐 Base URL
+
+Replace \`localhost:9090\` with the base URL where your Spring Boot application is running.
+
+## 🕵️‍♂️ Get a Customer by ID
+
+### 🚀 Request for JSON
+
+```http
+GET /customers/1
+Accept: application/json
+```
+
+### 🌟 Response for JSON
+
+```json
+{
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "phoneNumber": "1234567890",
+    "email": "john.doe@example.com",
+    "billing_address": "Street 123",
+    "delivery_address": "Street 123"
+}
+```
+
+### 🚀 Request for XML
+
+```http
+GET /customers/1
+Accept: application/xml
+```
+
+### 🌟 Response for XML
+
+```xml
+<Customer>
+    <id>1</id>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <phoneNumber>1234567890</phoneNumber>
+    <email>john.doe@example.com</email>
+    <billing_address>Street 123</billing_address>
+    <delivery_address>Street 123</delivery_address>
+</Customer>
+```
+
+Adjust the URLs and headers based on your specific implementation. This documentation shows how to request data in both JSON and XML formats using the \`Accept\` header.
+
+
