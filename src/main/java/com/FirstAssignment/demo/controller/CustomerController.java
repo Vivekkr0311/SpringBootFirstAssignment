@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
 
     @Autowired
+    private CustomerService customerService;
+
+    @Autowired
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
-
-    @Autowired
-    private CustomerService customerService;
 
     @PostMapping
     public ResponseEntity<Customer> registerCustomer(@RequestBody Customer customer) {

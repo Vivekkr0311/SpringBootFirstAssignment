@@ -16,8 +16,11 @@ public class Product {
     private int stock;
     private int leadtime;
 
+    public Product(){
 
-    public Product(Long skuID, String label, String productDescription, int stock, int leadtime) {
+    }
+
+    public Product(String label, String productDescription, int stock, int leadtime) {
         this.skuID = skuID;
         this.label = label;
         this.productDescription = productDescription;

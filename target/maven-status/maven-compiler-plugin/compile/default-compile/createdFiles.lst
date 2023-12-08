@@ -1,2 +1,6 @@
 com/FirstAssignment/demo/Exception/GlobalExceptionHandler.class
+com/FirstAssignment/demo/controller/ProductController.class
+com/FirstAssignment/demo/Repository/ProductServiceRepository.class
+com/FirstAssignment/demo/Service/ProductService.class
 com/FirstAssignment/demo/Config/WebConfig.class
+com/FirstAssignment/demo/Entity/Product.class
