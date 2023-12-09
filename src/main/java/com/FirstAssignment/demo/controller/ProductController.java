@@ -40,13 +40,14 @@ public class ProductController {
         return product != null ? new ResponseEntity<>(product, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("{skuID}")
-    public ResponseEntity<Void> updateProduct(@PathVariable Long skuID, @RequestBody Product updatedProduct){
+    @PutMapping("/{skuID}")
+    public ResponseEntity<Product> updateProduct(@PathVariable Long skuID, @RequestBody Product updatedProduct){
         productService.updateProduct(skuID, updatedProduct);
-        return new ResponseEntity<>(HttpStatus.OK);
+        Product updatedProd = productService.getProductBySKUID(skuID);
+        return updatedProduct != null ? new ResponseEntity<>(updatedProd, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @DeleteMapping("{skuID}")
+    @DeleteMapping("/{skuID}")
     public ResponseEntity<Void> deleteCustomer(@PathVariable Long skuID){
         productService.deleteProduct(skuID);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

@@ -12,7 +12,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long skuID;
     private String label;
-    private String productDescription;
+    private String product_description;
     private int stock;
     private int leadtime;
 
@@ -20,9 +20,9 @@ public class Product {
 
     }
 
-    public Product(String label, String productDescription, int stock, int leadtime) {
+    public Product(String label, String product_description, int stock, int leadtime) {
         this.label = label;
-        this.productDescription = productDescription;
+        this.product_description = product_description;
         this.stock = stock;
         this.leadtime = leadtime;
     }
@@ -43,12 +43,12 @@ public class Product {
         this.label = label;
     }
 
-    public String getProductDescription() {
-        return productDescription;
+    public String getProduct_description() {
+        return product_description;
     }
 
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
+    public void setProduct_description(String product_description) {
+        this.product_description = product_description;
     }
 
     public int getStock() {
