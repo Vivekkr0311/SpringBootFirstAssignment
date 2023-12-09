@@ -1,6 +1,7 @@
 package com.FirstAssignment.demo.controller;
 
 import com.FirstAssignment.demo.Entity.Customer;
+import com.FirstAssignment.demo.Entity.Product;
 import com.FirstAssignment.demo.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,9 +33,11 @@ public class CustomerController {
     }
 
     @PutMapping("/{customerId}")
-    public ResponseEntity<Void> updateCustomer(@PathVariable Long customerId, @RequestBody Customer updatedCustomer) {
+    public ResponseEntity<Customer> updateCustomer(@PathVariable Long customerId, @RequestBody Customer updatedCustomer) {
         customerService.updateCustomer(customerId, updatedCustomer);
-        return new ResponseEntity<>(HttpStatus.OK);
+        Customer updateCust = customerService.getCustomerById(customerId);
+        return updateCust != null ? new ResponseEntity<>(updateCust, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
     }
 
     @DeleteMapping("/{customerId}")
