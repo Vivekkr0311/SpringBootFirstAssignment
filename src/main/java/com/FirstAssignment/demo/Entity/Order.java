@@ -16,4 +16,37 @@ public class Order {
     private LocalDateTime creationDateTime;
     private Long customerId;
 
+    public Order(){
+
+    }
+
+    public Order(Long orderID, LocalDateTime creationDateTime, Long customerId) {
+        this.orderID = orderID;
+        this.creationDateTime = creationDateTime;
+        this.customerId = customerId;
+    }
+
+    public Long getOrderID() {
+        return orderID;
+    }
+
+    public void setOrderID(Long orderID) {
+        this.orderID = orderID;
+    }
+
+    public LocalDateTime getCreationDateTime() {
+        return creationDateTime;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setCreationDateTime(LocalDateTime creationDateTime) {
+        this.creationDateTime = creationDateTime;
+    }
 }
