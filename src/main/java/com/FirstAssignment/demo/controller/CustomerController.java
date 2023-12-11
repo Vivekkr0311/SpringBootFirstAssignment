@@ -37,7 +37,6 @@ public class CustomerController {
         customerService.updateCustomer(customerId, updatedCustomer);
         Customer updateCust = customerService.getCustomerById(customerId);
         return updateCust != null ? new ResponseEntity<>(updateCust, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
     }
 
     @DeleteMapping("/{customerId}")
